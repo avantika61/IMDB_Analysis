@@ -2,9 +2,102 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+      <!-- Required meta tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+      <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Netflix Analysis</title>
 </head>
-<body>
-<h1>It's Running</h1>
+<style>
+body { background-color: #30303d; color: #fff;  }
+#navbar{
+background-color: #30303d; color: #fff;border: 2px solid white;
+}
+#main{
+border: 2px solid white;
+height: 1020px;
+width: 100%;
+}
+#chartdiv {
+  width: 100%;
+  height: 500px;
+}
+#split {
+  height: 500px;
+  width: 100%;
+  top: 0;
+  padding-top: 20px;
+}
+#left {
+float:left;
+  height: 500px;
+  border: 2px solid white;
+  width: 50%;
+  left: 0;
+}
+#right {
+float:right;
+border: 2px solid white;
+height: 500px;
+width: 100%;
+  right: 0;
+}
+
+.navbar-dark {
+  background-color: #30303d; /* Update background color to Netflix black */
+}
+
+.navbar-dark .navbar-brand {
+  color: #ff0000; /* Update text color to Netflix red */
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #fff; /* Update text color to white */
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #ff0000; /* Update text color on hover to Netflix red */
+}
+
+</style>
+
+  </head>
+  <body>
+ <div id="navbar">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Netflix Data Analysis</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Blogs</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </div>
+  <div id="main">
+      <div id="right">
+          <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+          <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+          <script src="https://cdn.amcharts.com/lib/4/themes/dark.js"></script>
+          <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+          <script type="text/javascript">var data={{movie_show_response|tojson}}</script>
+          <script src="/static/js/piechart.js"></script>
+      </div>
+    </div>
+  </body>
 </body>
 </html>
